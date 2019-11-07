@@ -13,6 +13,7 @@
         <div class="logos">
           <img class="logo logo--akita" src="~/assets/AKITALogo.png" alt />
           <img class="logo logo--iota" src="~/assets/IOTALogo.png" alt />
+          <img class="logo logo--einfach" src="~/assets/einfachLogo.png" alt />
         </div>
         <div class="links">
           <a href="https://teamtrees.org/" target="_blank" class="button button--green">Learn more</a>
@@ -28,10 +29,9 @@
 </template>
 
 <script>
-  import * as IotaQR from "@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js";
-  //const {TrinityPaymentQR} = require("@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js");
-  console.log("TrinityPaymentQR");
-
+import * as IotaQR from "@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js";
+//const {TrinityPaymentQR} = require("@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js");
+console.log("TrinityPaymentQR");
 
 export default {
   components: {},
@@ -125,6 +125,10 @@ body {
       height: 60px;
       margin: 10px;
     }
+    &--einfach {
+      height: 100px;
+      margin-bottom: -10px;
+    }
   }
 }
 
@@ -153,5 +157,36 @@ body {
 }
 .button {
   color: #efefef;
+}
+
+@media only screen and (max-width: 1260px) {
+  .title {
+    font-size: 52px;
+  }
+  .subtitle {
+    font-size: 32px;
+  }
+
+  .logos {
+    padding-bottom: 30px;
+    .logo {
+      &--akita {
+        height: 50px;
+      }
+      &--iota {
+        height: 30px;
+        margin: 10px;
+      }
+    &--einfach {
+      height: 70px;
+      margin-bottom: -10px;
+    }
+    }
+  }
+  .button {
+    margin-top: 15px;
+    color: #efefef;
+  }
+
 }
 </style>
