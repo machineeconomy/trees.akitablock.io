@@ -10,6 +10,7 @@
       <div class="box">
         <h1 class="title">#iotatrees</h1>
         <h2 class="subtitle">Plant a 🌳 with IOTA</h2>
+        <p class="description">4 MIOTA = 1 TREE</p>
         <div class="logos">
           <img class="logo logo--akita" src="~/assets/AKITALogo.png" alt />
           <img class="logo logo--iota" src="~/assets/IOTALogo.png" alt />
@@ -86,6 +87,9 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #999;
+
+  font-family: "Open Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .container {
   margin: 0 auto;
@@ -133,8 +137,6 @@ body {
 }
 
 .title {
-  font-family: "Open Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -143,13 +145,16 @@ body {
 }
 
 .subtitle {
-  font-family: "Open Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   font-size: 42px;
   color: #efefef;
   word-spacing: 5px;
   padding: 20px;
+}
+
+.description {
+    font-size: 32px;
+    margin: 20px 0;
 }
 
 .links {
