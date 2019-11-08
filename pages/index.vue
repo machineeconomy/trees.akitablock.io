@@ -6,6 +6,11 @@
       </no-ssr>
       <div>
         <a :href="trinity_link" class="action button--green">Donate with Trinity</a>
+        <br />
+        <button @click="copyAdresss" class="action button--green">
+          Copy Address
+          <br />OQY...QNW
+        </button>
       </div>
       <div class="box">
         <h1 class="title">#iotatrees</h1>
@@ -17,7 +22,6 @@
           <img class="logo logo--einfach" src="~/assets/einfachLogo.png" alt />
         </div>
         <div class="links">
-          <a href="https://teamtrees.org/" target="_blank" class="button button--green">Learn more</a>
           <a
             href="https://thetangle.org/address/OQYZHELDOEEA9ZYIKHZRHZQDORNAEPMYWJ9KSNDOUDNAKWLGYSEQUQVXR9UYWQRJLCZSKT99L9ZTHDQNW"
             target="_blank"
@@ -74,6 +78,15 @@ export default {
         console.log("qr_code_data", qrCodeData);
         console.log("qr_code_data", qrCodeData.src);
       });
+    }
+  },
+  methods: {
+    async copyAdresss() {
+      try {
+        await this.$copyText(this.address);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 };
@@ -153,8 +166,8 @@ body {
 }
 
 .description {
-    font-size: 32px;
-    margin: 20px 0;
+  font-size: 32px;
+  margin: 20px 0;
 }
 
 .links {
@@ -182,16 +195,15 @@ body {
         height: 30px;
         margin: 10px;
       }
-    &--einfach {
-      height: 70px;
-      margin-bottom: -10px;
-    }
+      &--einfach {
+        height: 70px;
+        margin-bottom: -10px;
+      }
     }
   }
   .button {
     margin-top: 15px;
     color: #efefef;
   }
-
 }
 </style>
